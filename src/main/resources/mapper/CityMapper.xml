@@ -20,4 +20,14 @@
             city_name = #{cityName}
          </where>
      </select>
+
+     <select id="findCityById" resultMap="cityResultMap" parameterType="long">
+         SELECT
+         <include refid="city_base_column"/>
+         from city
+         <where>
+             id = #{id}
+         </where>
+
+     </select>
 </mapper>

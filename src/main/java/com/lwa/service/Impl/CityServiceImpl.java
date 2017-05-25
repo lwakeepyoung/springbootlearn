@@ -18,4 +18,10 @@ public class CityServiceImpl implements CityService {
     public City findCityByName(String cityName) {
         return cityDao.findCityByName(cityName);
     }
+
+    @Override
+    public City findCityById(Long id) {
+        return cityDao.findCityById(id);
+    }
+
 }

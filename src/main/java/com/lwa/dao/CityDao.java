@@ -9,4 +9,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface CityDao {
     City findCityByName(@Param("cityName") String cityName);
+
+    City findCityById(@Param("id") Long id);
 }
