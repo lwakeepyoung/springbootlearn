@@ -1,6 +1,7 @@
 package com.lwa.service.Impl;
 
 import com.lwa.dao.CityDao;
+import com.lwa.dao.UserMapper;
 import com.lwa.domain.City;
 import com.lwa.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CityServiceImpl implements CityService {
 
+    UserMapper userMapper;
     @Autowired
     private CityDao cityDao;
     @Override
