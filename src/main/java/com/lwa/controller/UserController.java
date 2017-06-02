@@ -19,11 +19,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-        @RequestMapping(value="/v1/api/users", method = RequestMethod.GET)
+    @RequestMapping(value="/v1/api/users", method = RequestMethod.GET)
     public List<User> findUserList(){
         Example example = new Example(User.class);
         example.createCriteria().andEqualTo("email","123@qq.com");
-
         List<User> users = userService.selectByExample(example);
         return users;
     }
